@@ -2,9 +2,9 @@ pipeline {
   
   agent { docker { image 'python3.6' } }
   
-  stages{
+  stages {
     
-    stage {
+    stage('test') {
       steps { 'python --version' }
     }
     
