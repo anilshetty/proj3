@@ -14,14 +14,14 @@ pipeline {
       agent { docker { image 'nginx' } }
       steps {
 
-        sh 'nginx --version'
+        sh 'nginx -v'
       }
     }
     stage('deploy'){
       agent { docker { image 'httpd' }}
       steps {
 
-        sh 'httpd --version'
+        sh 'httpd -v'
       }
     }
     
